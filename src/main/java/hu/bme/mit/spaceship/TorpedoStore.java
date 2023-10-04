@@ -27,7 +27,7 @@ public class TorpedoStore {
       }
     }
   }
-private Random random= new Random());
+private Random random= new Random();
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos");
@@ -42,6 +42,7 @@ private Random random= new Random());
     if (r >= FAILURE_RATE) {
       // successful firing
       this.torpedoCount -= numberOfTorpedos;
+
       success = true;
     } else {
       // simulated failure
